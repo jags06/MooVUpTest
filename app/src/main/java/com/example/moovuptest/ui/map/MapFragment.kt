@@ -5,14 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
+import com.example.moovuptest.BaseViewModel
 import com.example.moovuptest.databinding.FragmentMapBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import timber.log.Timber
 
 class MapFragment : Fragment() {
 
-    private val mapViewModel: MapViewModel by viewModel()
     private var _binding: FragmentMapBinding? = null
+    private val baseViewModel: BaseViewModel by viewModel()
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -25,10 +26,21 @@ class MapFragment : Fragment() {
     ): View {
         _binding = FragmentMapBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        mapViewModel.text.observe(viewLifecycleOwner, Observer {
-        })
         return root
+
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        getData()
+    }
+
+    private fun getData() {
+        baseViewModel.users.observe(viewLifecycleOwner) { users ->
+            users?.let {
+            Timber.d("Check Data in Map $it")
+            }
+        }
 
     }
 

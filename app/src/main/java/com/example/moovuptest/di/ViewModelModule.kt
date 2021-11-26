@@ -9,5 +9,5 @@ import org.koin.dsl.module
 val viewModelModule= module {
    viewModel{ MapViewModel()}
     viewModel { ListViewModel() }
-    single { BaseViewModel() }
+    single { BaseViewModel(get()) }
 }

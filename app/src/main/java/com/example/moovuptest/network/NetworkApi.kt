@@ -6,6 +6,6 @@ import retrofit2.http.GET
 
 interface NetworkApi {
     @GET(".")
-    suspend fun getData():Response<List<DataModel>>
+     suspend fun getData():Response<List<DataModel>>
 
 }

@@ -4,7 +4,7 @@
     <string name="title_dashboard">MapView</string>
     <string name="title_notifications">Notifications</string>
 
-    <string name="url">https://api.json-generator.com/templates/Xp8zvwDP14dJ/data</string>
+    <string name="url">https://api.json-generator.com/templates/Xp8zvwDP14dJ/data/</string>
     <string name="token">v3srs6i1veetv3b2dolta9shrmttl72vnfzm220z</string>
 
 </resources>

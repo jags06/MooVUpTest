@@ -13,7 +13,6 @@ import org.koin.android.ext.koin.androidApplication
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava3.RxJava3CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
@@ -59,7 +58,6 @@ val networkModule = module {
         Retrofit.Builder()
             .baseUrl(androidApplication().getString(R.string.url))
             .addConverterFactory(MoshiConverterFactory.create(get()))
-            .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
             .client(get())
             .build()
 
