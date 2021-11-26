@@ -44,6 +44,11 @@ class BaseActivity : AppCompatActivity() {
 
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return super.onSupportNavigateUp()
+    }
+
     private fun showBottomNav() {
         binding.navView.visibility = View.VISIBLE
 

@@ -9,5 +9,5 @@ data class LocationModel(
     @Json(name = "latitude")
     var latitude: Double,
     @Json(name = "longitude")
-    var longitude: Double?=null
+    var longitude: Double?
 ):Parcelable

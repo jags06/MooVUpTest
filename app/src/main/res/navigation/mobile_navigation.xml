@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/navigation_list"
         android:name="com.example.moovuptest.ui.list.ListFragment"
-        android:label="@string/title_home"
+        android:label="@string/title_listview"
         tools:layout="@layout/fragment_list">
         <action
             android:id="@+id/action_navigation_list_to_navigation_detail"
@@ -20,12 +20,12 @@
     <fragment
         android:id="@+id/navigation_map"
         android:name="com.example.moovuptest.ui.map.MapFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_mapview"
         tools:layout="@layout/fragment_map" />
     <fragment
         android:id="@+id/navigation_detail"
         android:name="com.example.moovuptest.ui.detail.DetailFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_detail"
         tools:layout="@layout/detail_fragment" >
         <argument
             android:name="dataModel"
