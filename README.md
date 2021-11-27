@@ -152,6 +152,26 @@ class Graph {
 
 ```
 
+```
+Output:
+[A, B, C, D, E, F, G, H]
+[A, B, C, D, E, H]
+[A, B, C, F, E, H]
+[A, B, C, F, G, H]
+[A, B, D, C, F, E, H]
+[A, B, D, C, F, G, H]
+[A, B, D, E, F, G, H]
+[A, B, D, E, H]
+[A, D, B, C, F, E, H]
+[A, D, B, C, F, G, H]
+[A, D, C, F, E, H]
+[A, D, C, F, G, H]
+[A, D, E, F, G, H]
+[A, D, E, H]
+[A, H]
+Shortest path:
+[A, H]
+```
 
 ## Question 2
 ### API Specification
