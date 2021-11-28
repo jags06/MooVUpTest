@@ -21,7 +21,7 @@ private const val WRITE_TIMEOUT = 60L
 private const val READ_TIMEOUT = 60L
 
 val networkModule = module {
-    single { Cache(androidApplication().cacheDir, 100L * 1024 * 1024) }
+    single { Cache(androidContext().cacheDir, 100L * 1024 * 1024) }
 
     single {
         Moshi.Builder()
@@ -35,7 +35,7 @@ val networkModule = module {
             writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)
             readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
             retryOnConnectionFailure(true)
-        }.addInterceptor(HeaderInterceptor(androidApplication())).addInterceptor(
+        }.addInterceptor(HeaderInterceptor(androidContext())).addInterceptor(
             HttpLoggingInterceptor().apply {
                 if (BuildConfig.DEBUG) {
                     level = HttpLoggingInterceptor.Level.HEADERS

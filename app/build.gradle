@@ -62,7 +62,6 @@ dependencies {
     implementation "com.squareup.moshi:moshi-kotlin:1.12.0"
 
 
-
     // Koin main features for Android
     implementation "io.insert-koin:koin-android:$koin_version"
 // No more koin-android-viewmodel, koin-android-scope, koin-android-fragment
@@ -74,11 +73,26 @@ dependencies {
     implementation "io.insert-koin:koin-androidx-navigation:$koin_version"
 // Jetpack Compose
     implementation "io.insert-koin:koin-androidx-compose:$koin_version"
-
+// Koin for JUnit 4
+    testImplementation "io.insert-koin:koin-test-junit4:$koin_version"
+// Koin for JUnit 5
+    testImplementation "io.insert-koin:koin-test-junit5:$koin_version"
     // Timber for Logs
+    // Koin Core features
+    implementation "io.insert-koin:koin-core:$koin_version"
+// Koin Test features
+    androidTestImplementation "io.insert-koin:koin-test:$koin_version"
+
     implementation 'com.jakewharton.timber:timber:4.7.1'
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 
     implementation 'com.github.bumptech.glide:glide:4.12.0'
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2"
+
+    debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
+
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.4.0"
+    androidTestImplementation "io.mockk:mockk-android:1.11.0"
+    androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 
 }
