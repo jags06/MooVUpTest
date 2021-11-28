@@ -24,9 +24,5 @@ class ListFragmentTest {
     fun test_isListFragmentVisible_onAppLauch() {
         onView(withId(R.id.usersList)).check(matches(isDisplayed()))
     }
-    /*Select any item open detail fragment press back button*/
-    @Test
-    fun test_SelectListItem_isDetailFragmetVisible() {
-      //  onView(withId(R.id.usersList)).perform(actionOnItemAtPosition<UserListAdapter>)
-    }
+
 }

@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class BaseViewModel(private val networkApi: NetworkApi) : ViewModel() {
-    val loading = MutableLiveData<Boolean>()
+    var loading = MutableLiveData<Boolean>()
     val users = MutableLiveData<List<DataModel>>()
     val usersLoadError = MutableLiveData<String?>()
     private val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
